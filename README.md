@@ -9,6 +9,9 @@ Building an alternative to Quizlet
     - [ ] Light/Dark theme switch
 - [ ] Input parsing
     - [ ] Raw user input using comma separation `word,definition`
+- [ ] Game
+    - [ ] Play in order 
+    - [ ] Play shuffled 
 - [ ] Support for keyboard input navigation
     - [ ] Spacebar flips card
     - [ ] Arrow keys progress through cards
