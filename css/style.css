@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+:root {
+    --white: white;
+    --text-clr: black;
+    --bars: #1f1f1f;
+    --dark-back: #333;
+    --light-back: #eee;
+    --darkOS-light-theme: #333;
+
+    --background-clr: var(--light-back);
+}
+
+.darkTheme {
+    --background-clr: var(--dark-back);
+    --text-clr: var(--white);
+}
+
+
+nav {
+    background: var(--bars);
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+}
+
+nav button {
+    color: white;
+    background-color: blue;
+    margin: 0 10px;
+}
+
+h1  {
+    color: var(--text-clr);
+}
+
+
+div {
+    margin: 10px 0;
+}
+
+main {
+    transition: background 0.2s linear, color 0.2s linear;
+    background-color: var(--background-clr);
+    color: var(--text-clr);
+    height: 100vh;
+}
+
+textarea {
+    width: 80vw;
+    min-height: 200px;
+    height: calc(100vh - 300px);
+    height: 50vh;
+    display: flex;
+    margin: 10px auto;
+    border-width: 3px;
+    border-radius: 5px;
+    font-size: 16pt;
+    resize: vertical;
+    font-family: monospace;
+    color: var(--text-clr);
+    background-color: var(--background-clr);
+}
+

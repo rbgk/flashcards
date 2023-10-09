@@ -6,7 +6,7 @@ Building an alternative to Quizlet
     - [ ] Generate cards
     - [ ] Start studying
     - [ ] Shuffle cards
-    - [ ] Light/Dark theme switch
+    - [ ] Light/Dark [theme switch](https://github.com/rbgk/flashcards/edit/main/README.md#theme-switch)
 - [ ] Input parsing
     - [ ] Raw user input using comma separation `word,definition`
 - [ ] Game
@@ -21,3 +21,9 @@ Building an alternative to Quizlet
 - [ ] Export cards to file
     - [ ] Export as JSON file
     - [ ] Export as CSV file
+
+---
+#### Theme Switch
+- Automatically detects OS-preferred theme and assigns the respective theme  
+- Theme button functionality allows for manually override  
+- Manual override is stored in localstorage holding higher priority than OS-level preference  
