@@ -6,7 +6,7 @@ Building an alternative to Quizlet
     - [ ] Generate cards
     - [ ] Start studying
     - [ ] Shuffle cards
-    - [ ] Light/Dark [theme switch](https://github.com/rbgk/flashcards/edit/main/README.md#theme-switch)
+    - [ ] Light/Dark [theme switch](https://github.com/rbgk/flashcards/#theme-switch)
 - [ ] Input parsing
     - [ ] Raw user input using comma separation `word,definition`
 - [ ] Game
