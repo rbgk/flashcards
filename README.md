@@ -8,7 +8,7 @@ Building an alternative to Quizlet
     - [ ] Shuffle cards
     - [x] Light/Dark [theme switch](https://github.com/rbgk/flashcards/#theme-switch)
 - [ ] Input parsing
-    - [ ] Raw user input using comma separation `word,definition`
+    - [x] Raw user input using comma separation `word,definition`
 - [ ] Game
     - [ ] Play in order 
     - [ ] Play shuffled 
