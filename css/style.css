@@ -43,18 +43,11 @@ nav {
 }
 
 nav button {
-    color: white;
-    background-color: blue;
     margin: 0 10px;
 }
 
 h1  {
     color: var(--text-clr);
-}
-
-
-div {
-    margin: 10px 0;
 }
 
 main {
