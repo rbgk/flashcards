@@ -73,3 +73,16 @@ textarea {
     background-color: var(--background-clr);
 }
 
+
+.action {
+    color: black;
+}
+.action button {
+    height: 78px;
+    aspect-ratio: 5/3;
+    border-radius: 10px;
+}
+#gameStatus {
+    margin-top: 10px;
+}
+
