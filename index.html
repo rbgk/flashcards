@@ -5,24 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/aesthetics.js"></script>
     <script defer src="js/theme.js"></script>
+    <script defer src="js/buttons.js"></script>
+    <script defer src="js/generateButton.js"></script>
 </head>
 <body>
     <main>
         <nav>
-            <button class="material-symbols-outlined" id="themeToggleButton"  aria-label="toggle theme"></button>
-            <button>About</button>
+            <button type="button" class="btn btn-primary material-symbols-outlined" id="themeToggleButton"  aria-label="toggle theme"></button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aboutModal">About</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instructionsModal">Instructions</button>
         </nav>
+
+        <div class="hero" style="text-align: center;">
+            <h1>
+                Flashcards
+            </h1>
+            <span>
+                <i>A Quizlet Alternative</i>
+            </span>
+        </div>
 
         <div class="inputSection">
             <textarea id="inputBox"></textarea>
         </div>
 
-        <div class="action">
+        <div class="action flex-even">
             <button id="submitButton" onclick="Generate()">Generate Cards</button>
             <button id="studyButton" onclick="Study()">Study now</button>
+        </div>
+
+        <div class="flex-even">
+            <p id="gameStatus"></p>
+        </div>
+
+        <!-- About Modal -->
+        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="aboutModalLabel">
+                            About
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Throughout much of high school, Quizlet was my go-to for quickly learning vocab.</p>
+                        <p>As a college student taking up on a new language, I realized I needed Quizlet again to help with low-effort memorization.</p>
+                        <p>Unfortunately, Quizlet has turned to a Freemium structure, and locked some really nice features.</p>
+                        <p>It was no longer possible to comfortably navigate the site without using an ad-blocker.</p>
+                        <p>As a software engineer, we tend to build solutions to our problems...</p>
+                        <p>My initial goal was to build the solution to my standards, but I won't stop developing this project into something bigger, until I have to.</p>
+                        <p>I can guarantee, this will be free forever, and <i>never</i> contain ads.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Try Flashcards now!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions Modal -->
+        <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="instructionsModalLabel">
+                            How to Use:
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ol>
+                            <li>
+                                Type your words and definition in the text box.
+                            </li>
+                            <li>
+                                Separate the words and definitions with a comma "," character.
+                            </li>
+                            <li>
+                                Generate your cards with the Generate Cards button.
+                            </li>
+                            <li>
+                                When you're ready, you can click Study now.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>
