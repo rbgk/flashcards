@@ -28,9 +28,6 @@
     background-color: var(--modal-back);
     color: var(--text-clr);
 }
-.modal-dialog {
-    min-width: 550px;
-}
 .btn-close {
     filter: var(--exit-modal);
 }
