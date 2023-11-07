@@ -9,6 +9,7 @@
 
     --background-clr: var(--light-back);
     --modal-back: #fff;
+    --card-clr: var(--dark-back);
 }
 
 .darkTheme {
@@ -16,6 +17,7 @@
     --text-clr: var(--white);
     --modal-back: #666;
     --exit-modal: invert(1) grayscale(100%) brightness(200%);
+    --card-clr: var(--light-back);
 }
 
 
@@ -83,3 +85,31 @@ textarea {
     margin-top: 10px;
 }
 
+#game {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+}
+
+#cardFace {
+    border-radius: 25px;
+    border: 1px solid var(--card-clr);
+    background-color: var(--background-clr);
+    width: 400px;
+    aspect-ratio: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card-word, #card-defn {
+    color: var(--text-clr);
+}
+
+.arrows {
+    margin: 0 20px;
+    position: absolute;
+    height: 200px;
+}
