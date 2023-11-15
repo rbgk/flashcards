@@ -5,13 +5,13 @@ const themeToggleButton = document.getElementById("themeToggleButton");
 const enableDarkTheme = () => {
     document.body.classList.add("darkTheme");
     localStorage.setItem("theme" , "darkmode");
-    themeToggleButton.innerHTML = "dark_mode";
+    themeToggleButton.innerHTML = "sunny";
 };
 
 const disableDarkTheme = () => {
     document.body.classList.remove("darkTheme");
     localStorage.setItem("theme" , "lightmode");
-    themeToggleButton.innerHTML = "sunny";
+    themeToggleButton.innerHTML = "dark_mode";
 };
 
 themeToggle.addEventListener("click", () => {
