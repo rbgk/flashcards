@@ -16,7 +16,7 @@
 <body>
     <main>
         <nav>
-            <button type="button" class="btn btn-primary material-symbols-outlined" id="themeToggleButton"  aria-label="toggle theme"></button>
+            <button type="button" class="btn btn-primary material-symbols-outlined" data-bs-toggle="modal" data-bs-target="#settingsModal">settings</button>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aboutModal">About</button>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instructionsModal">Instructions</button>
         </nav>
@@ -40,7 +40,35 @@
         </div>
 
         <div class="flex-even">
-            <p id="gameStatus"></p>
+
+        <!-- Settings Modal -->
+        <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="settingsModalLabel">
+                            Settings
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="no-bullet">
+                            <li>
+                                <button type="button" class="btn btn-primary material-symbols-outlined" id="themeToggleButton"  aria-label="toggle theme">
+                                    <!-- theme.js -->
+                                </button>
+                                Manual override for automatic theme detection
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-danger material-symbols-outlined" id="factoryResetButton" onclick="factoryReset()">
+                                    delete_history
+                                </button>
+                                Clear data (theme override, text box, saved set)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- About Modal -->
