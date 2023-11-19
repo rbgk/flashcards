@@ -10,10 +10,7 @@ function parseInput() {
      *   cardPair is the word side of the cardSet
      *   cardPair is the definition side of the cardSet
     */
-    const fullSet = document.getElementById('inputBox').value;
-    console.log(fullSet);
-
-
+    const fullSet = document.getElementById("inputBox").value;
     if (fullSet == "") {
         // if inputBox is empty
         statusCheck(1);
@@ -40,14 +37,18 @@ function parseInput() {
 }
 
 function statusCheck(statusCode) {
-    switch (statusCode) {
-        case 0:
-            return gameStatusBar.innerHTML = "Cards generated successfully";
-        
-        case 1: 
-            return gameStatusBar.innerHTML = "Error: Please check your input format";
+    /**
+     * Update the status bar with 
+     */
 
-        default:
-            return gameStatusBar.innerHTML = "Unable to verify status"
+    if (statusCode == 0) {
+        gameStatusBar.style.color = "white";
+        gameStatusBar.innerHTML = "Cards generated successfully";
+    } else if (statusCode == 1) {
+        gameStatusBar.style.color = "red";
+        gameStatusBar.innerHTML = "Error: <br> Please check your input format";
+    } else {
+        gameStatusBar.style.color = "red";
+        gameStatusBar.innerHTML = "Unable to verify status"
     } 
 }
