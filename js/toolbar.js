@@ -25,7 +25,7 @@ function loadSavedSet() {
     let savedSet = localStorage.getItem("savedSet");
     if (savedSet === null || savedSet === "") {
         gameStatusBar.style.color = "red";
-        gameStatusBar.innerHTML = "You do not have a saved set <br> Create or upload";
+        gameStatusBar.innerHTML = "No saved set <br> Create or upload";
     } else {
         inputBox.value = savedSet;
         gameStatusBar.style.color = "white";
