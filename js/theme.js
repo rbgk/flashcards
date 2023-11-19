@@ -3,13 +3,13 @@ const themeToggle = document.querySelector("#themeToggleButton");
 const themeToggleButton = document.getElementById("themeToggleButton");
 
 const enableDarkTheme = () => {
-    document.body.classList.add("darkTheme");
+    document.documentElement.classList.add("darkTheme");
     localStorage.setItem("theme" , "darkmode");
     themeToggleButton.innerHTML = "sunny";
 };
 
 const disableDarkTheme = () => {
-    document.body.classList.remove("darkTheme");
+    document.documentElement.classList.remove("darkTheme");
     localStorage.setItem("theme" , "lightmode");
     themeToggleButton.innerHTML = "dark_mode";
 };
