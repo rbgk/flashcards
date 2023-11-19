@@ -31,3 +31,14 @@ let defnList = new Array();
 const inputBox = document.getElementById("inputBox");
 inputBox.placeholder = `Word 1,Definition 1 \nWord 2,Definition 2 \nWord 3,Definition 3`;
 
+
+/**
+ * Clear out localStorage
+ * Manually reset inputBox because User can see changes
+ */
+function factoryReset() {
+    localStorage.clear();
+    inputBox.value = "";
+    alert(`Data cleared!`);
+}
+

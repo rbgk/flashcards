@@ -1,8 +1,8 @@
-let wordList = new Array();
-let defnList = new Array();
-const gameStatusBar = document.getElementById("gameStatus");
+function Generate() {
+    parseInputBox();
+}
 
-function parseInput() {
+function parseInputBox() {
     /**
      * Indent shows hierarchy
      * fullSet is the entire set, as inputted by user
