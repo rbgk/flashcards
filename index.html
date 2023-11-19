@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/aesthetics.js"></script>
     <script defer src="js/theme.js"></script>
-    <script defer src="js/buttons.js"></script>
+    <script defer src="js/toolbar.js"></script>
     <script defer src="js/generateButton.js"></script>
 </head>
 <body>
@@ -31,7 +31,23 @@
         </div>
 
         <div class="inputSection">
-            <textarea id="inputBox"></textarea>
+
+        <div id="toolbar" class="text-center">
+            <button title="Save a set of flashcards to your browser" class="btn btn-secondary" id="archiveButton" onclick="saveToLocal()">
+                <span class="material-symbols-outlined">
+                    archive
+                </span>
+            </button>
+            <button title="Load the saved set from the browser" class="btn btn-secondary" id="loadButton" onclick="loadSavedSet()">
+                <span class="material-symbols-outlined">
+                    unarchive
+                </span>
+            </button>
+            <button title="Clear the text box" class="btn btn-danger" id="clearButton" onclick="clearInput()">
+                <span class="material-symbols-outlined">
+                    delete
+                </span>
+            </button>
         </div>
 
         <div class="action flex-even">
