@@ -49,6 +49,6 @@ function statusCheck(statusCode) {
         gameStatusBar.innerHTML = "Error: <br> Please check your input format";
     } else {
         gameStatusBar.style.color = "red";
-        gameStatusBar.innerHTML = "Unable to verify status"
+        gameStatusBar.innerHTML = "Unable to verify status";
     } 
 }
