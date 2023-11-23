@@ -58,9 +58,26 @@
             <button class="btn btn-primary" id="studyButton" onclick="Study()">Study now</button>
         </div>
 
-        <div class="flex-even">
-            <p id="gameStatus">&gt; status message &lt;</p>
+        <div id="game">
+            <div id="gameUI">
+                <button class="btn btn-primary arrows" id="arrow-decrease" onclick="decreaseCard()">
+                    <span class="material-symbols-outlined">
+                        arrow_back
+                    </span>
+                </button>
+
+                <button id="cardFace" onclick="flipCard()"></button>
+                
+                <button class="btn btn-primary arrows" id="arrow-increase" onclick="increaseCard()" style="right: 0px;">
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                </button>
+                
+                <button class="btn btn-close" data-bs-dismiss="game" aria-label="Close" onclick="Close()"></button>
+            </div>
         </div>
+
 
         <!-- Settings Modal -->
         <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
