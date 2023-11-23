@@ -42,3 +42,34 @@ function factoryReset() {
     alert(`Data cleared!`);
 }
 
+
+/**
+ * Define flashcard to populate with word and defn
+ */
+let flashcard = document.getElementById("cardFace");
+
+
+/**
+ * Reduces the bloat in User Feedback messages on gameStatusBar
+ *  gameStatusBar.innerHTML = "user feedback text"; // write text
+ *  gameStatusBar.style.color = "red";              // define color
+ * Instead of defining and overwriting each time, we'll use a function to automate this process
+ */
+function dangerText(message) {
+    gameStatusBar.classList.add("danger");
+    gameStatusBar.classList.remove("default");
+    gameStatusBar.innerHTML = message;
+}
+function defaultText(message) {
+    gameStatusBar.classList.add("default");
+    gameStatusBar.classList.remove("danger");
+    gameStatusBar.innerHTML = message;
+}
+
+
+/**
+ * Key to unlocking the game overlay
+ * A boolean only set to true upon successful inputBox parsing
+ */
+let overlayAuth = false;
+
