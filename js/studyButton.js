@@ -3,12 +3,7 @@ const game = document.getElementById("game");
 function Study() {
     // check if cards have been generated
     // if not, prevent launch
-    // cardIndex = 0;
-    // arrow_R.disabled = false;
-    // console.log("unlock right");
-    
     gameState(overlayAuth);
-    // cardIndexCheck();
 }
 
 function gameState(overlayAuth) {
@@ -16,7 +11,7 @@ function gameState(overlayAuth) {
     switch (overlayAuth) {
         case true:
             // enable
-            aesthetics();
+            overlayAesthetics();
             launchOverlay();
             break;
         case false:
@@ -34,12 +29,9 @@ function launchOverlay() {
      * User clicks study button
      * button should open up the flashcards in a modal that cannot be accidentally escape keyed
      *  modal takes up majority of the screen 
-     * 
-     * 
      */
     defaultText("Navigate with arrows <br> Click card to flip");
     game.style.display = "flex";
-    // arrow_L.disabled = true;
     cardIndexCheck();
 }
 
