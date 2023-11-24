@@ -1,4 +1,9 @@
 function Generate() {
+    // empty cache before parsing to ensure clean slate every time
+    wordList = [];
+    defnList = [];
+    cardIndex = 0;
+
     parseInputBox();
 }
 
@@ -7,8 +12,8 @@ function parseInputBox() {
      * Indent shows hierarchy
      * fullSet is the entire set, as inputted by user
      *  cardSet is the individual cards. includes term and defn
-     *   cardPair is the word side of the cardSet
-     *   cardPair is the definition side of the cardSet
+     *   cardPair[0] is the word side of the cardSet
+     *   cardPair[1] is the definition side of the cardSet
     */
     const fullSet = document.getElementById("inputBox").value;
     if (fullSet == "") {
@@ -21,11 +26,18 @@ function parseInputBox() {
 
     // take the fullSet as inputted and split into lines
     const cardSet = fullSet.split("\n");
+    
+    /**
+     * initialize maximum variable by calculating items of array
+     * used in overlay for determining when to stop indexing array
+     */
+    maximum = (cardSet.length-1);
+
 
     // as long as the line exists, we will 
     // split each line into a pair of word and definition
     for (let i=0; i<cardSet.length; i++) {
-        var cardPair = cardSet[i].split(",");
+        cardPair = cardSet[i].split(",");
 
         // add word and defn to respective lists
         // we can do this because the cardPair gets overriden by new pairs of word-defn
@@ -33,22 +45,26 @@ function parseInputBox() {
         // TODO: Use Map object?
         wordList.push(cardPair[0]);
         defnList.push(cardPair[1]);
+        
+        // pre-populate the first card so it exists when user calls the overlay
+        flashcard.innerHTML = wordList[0];
     }
 }
 
 function statusCheck(statusCode) {
     /**
-     * Update the status bar with 
+     * Update the status bar with...
      */
+    switch (statusCode) {
+        case 0:
+            gameState();
+            defaultText("Cards generated successfully");
 
-    if (statusCode == 0) {
-        gameStatusBar.style.color = "white";
-        gameStatusBar.innerHTML = "Cards generated successfully";
-    } else if (statusCode == 1) {
-        gameStatusBar.style.color = "red";
-        gameStatusBar.innerHTML = "Error: <br> Please check your input format";
-    } else {
-        gameStatusBar.style.color = "red";
-        gameStatusBar.innerHTML = "Unable to verify status";
-    } 
+            // cards are generated, authorize overlay access
+            overlayAuth = true;
+            break;
+        case 1:
+            dangerText("Error: <br> Input is empty");
+            break;
+    }
 }
