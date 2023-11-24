@@ -3,8 +3,8 @@ Building an alternative to Quizlet
 
 ### Feature List:
 - [ ] UX Buttons
-    - [ ] Generate cards
-    - [ ] Start studying
+    - [x] Generate cards
+    - [x] Start studying
     - [ ] Shuffle cards
     - [x] Light/Dark [theme switch](https://github.com/rbgk/flashcards/#theme-switch)
     - [x] Save a set [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
