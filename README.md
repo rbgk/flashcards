@@ -28,6 +28,11 @@ Building an alternative to Quizlet
     - [ ] Export as `csv` file
 
 ---
+### Known Limitations of Project
+- When a word or definition includes a comma, only the 1st comma is parsed as the splitter, and any characters following the 2nd comma will not be included in definition  
+- Browser localStorage option only saves (1) set, while it has ability to store more  
+- At the current time, this is only available on the web  
+
 #### Theme Switch
 - Automatically detects OS-preferred theme and assigns the respective theme  
 - Theme button functionality allows for manually override  
