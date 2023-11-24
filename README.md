@@ -13,17 +13,19 @@ Building an alternative to Quizlet
 - [ ] Input parsing
     - [x] Raw user input using comma separation `word,definition`
 - [ ] Game
-    - [ ] Play in order 
+    - [x] Play in order 
     - [ ] Play shuffled 
 - [ ] Support for keyboard input navigation
     - [ ] Spacebar flips card
     - [ ] Arrow keys progress through cards
 - [ ] Import file to generate cards
-    - [ ] Import as JSON file
-    - [ ] Import as CSV file
+    - [ ] Import as `.txt` file
+    - [ ] Import as `json` file
+    - [ ] Import as `csv` file
 - [ ] Export cards to file
-    - [ ] Export as JSON file
-    - [ ] Export as CSV file
+    - [ ] Export as `txt` file
+    - [ ] Export as `json` file
+    - [ ] Export as `csv` file
 
 ---
 #### Theme Switch
