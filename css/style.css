@@ -69,7 +69,7 @@ body {
 }
 
 /* inputBox */
-textarea {
+#inputBox {
     width: 80vw;
     height: 50vh;
     display: flex;
@@ -81,6 +81,10 @@ textarea {
     font-family: monospace;
     color: var(--text-clr);
     background-color: var(--background-clr);
+    white-space: nowrap;
+}
+#inputBox::placeholder {
+    white-space: pre-wrap;
 }
 
 /* Action bar */
