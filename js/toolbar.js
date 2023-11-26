@@ -1,4 +1,20 @@
 // File contains functions from the toolbar buttons
+function formatTextWrap() {
+    // user can choose wrapping style
+    // css defaults to nowrap
+    // first case value is default with javascript
+    switch (inputBox.style.whiteSpace) {
+        case "":
+            inputBox.style.whiteSpace = "normal";
+            break;
+        case "normal":
+            inputBox.style.whiteSpace = "nowrap";
+            break;
+        case "nowrap":
+            inputBox.style.whiteSpace = "normal";
+            break;
+    }
+}
 
 function saveToLocal() {
     // save value directly from inputBox.value
