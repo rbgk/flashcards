@@ -87,6 +87,11 @@ body {
     white-space: pre-wrap;
 }
 
+/* Toolbar */
+.toolbar {
+    padding-bottom: 5px;
+}
+
 /* Action bar */
 .action button {
     height: 78px;
