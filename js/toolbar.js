@@ -1,4 +1,22 @@
 // File contains functions from the toolbar buttons
+function formatBold() {
+    // append bold tags and provide feedback
+    inputBox.value += "<b> </b>";
+    defaultText("Wrap <b>bold</b> text between &lt;b&gt; tags &lt;/b&gt;");
+}
+
+function formatItalic() {
+    // append italic tags and provide feedback
+    inputBox.value += "<i> </i>";
+    defaultText("Wrap <i>italic</i> text between &lt;i&gt; tags &lt;/i&gt;");
+}
+
+function formatUnderlined() {
+    // append underline tags and provide feedback
+    inputBox.value += "<u> </u>";
+    defaultText("Wrap <u>underlined</u> text between &lt;u&gt; tags &lt;/u&gt;");
+}
+
 function formatTextWrap() {
     // user can choose wrapping style
     // css defaults to nowrap
@@ -18,6 +36,7 @@ function formatTextWrap() {
             break;
     }
 }
+
 
 function saveToLocal() {
     // save value directly from inputBox.value

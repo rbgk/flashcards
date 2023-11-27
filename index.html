@@ -38,12 +38,30 @@
             <textarea id="inputBox" autofocus></textarea>
         </div>
 
-        <div id="toolbar" class="text-center">
+        <div class="toolbar text-center">
+            <button title="Bold" class="btn btn-secondary" id="formatBoldButton" onclick="formatBold()">
+                <span class="material-symbols-outlined">
+                    format_bold
+                </span>
+            </button>
+            <button title="Italic" class="btn btn-secondary" id="formatItalicButton" onclick="formatItalic()">
+                <span class="material-symbols-outlined">
+                    format_italic
+                </span>
+            </button>   
+            <button title="Underline" class="btn btn-secondary" id="formatUnderlinedButton" onclick="formatUnderlined()">
+                <span class="material-symbols-outlined">
+                    format_underlined
+                </span>
+            </button>
             <button title="Toggle text wrap" class="btn btn-secondary" id="formatTextWrapButton" onclick="formatTextWrap()">
                 <span class="material-symbols-outlined">
                     format_text_wrap
                 </span>
             </button>
+        </div>
+        
+        <div class="toolbar text-center">
             <button title="Save a set of flashcards to your browser" class="btn btn-secondary" id="archiveButton" onclick="saveToLocal()">
                 <span class="material-symbols-outlined">
                     archive
