@@ -6,12 +6,15 @@ function formatTextWrap() {
     switch (inputBox.style.whiteSpace) {
         case "":
             inputBox.style.whiteSpace = "normal";
+            defaultText("Text wrap on")
             break;
         case "normal":
             inputBox.style.whiteSpace = "nowrap";
+            defaultText("Text wrap off")
             break;
         case "nowrap":
             inputBox.style.whiteSpace = "normal";
+            defaultText("Text wrap on")
             break;
     }
 }
