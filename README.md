@@ -7,6 +7,8 @@ Building an alternative to Quizlet
     - [x] Start studying
     - [ ] Shuffle cards
     - [x] Light/Dark [theme switch](https://github.com/rbgk/flashcards/#theme-switch)
+    - [x] HTML Text Formatting [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
+    - [x] Text wrapping toggle [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
     - [x] Save a set [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
     - [x] Load saved set [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
     - [x] Clear textbox [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
@@ -39,4 +41,8 @@ Building an alternative to Quizlet
 - Manual override is stored in localStorage holding higher precedence than auto-detected preference  
 
 #### Toolbar buttons
-A row of buttons aiding the user, consisting of saving and loading a set, and clearing the text box.
+A section of buttons aiding the user.  
+- Text formatting from bold, italic, underline
+  - HTML tags are NOT limited to bold, italic, underline. User can take advantage of `.innerHTML` and use supported HTML tags
+- Saving and loading a set
+- Clears the text box at one button click
