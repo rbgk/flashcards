@@ -139,10 +139,16 @@
                                 Import file (.txt or .csv)
                             </li>
                             <li>
-                                <button type="button" class="btn btn-primary material-symbols-outlined" id="exportButton" onclick="factoryReset()">
-                                    publish
-                                </button>
-                                Export file (.txt or .csv)
+                                <div class="dropdown">
+                                     <button type="button" class="btn btn-primary material-symbols-outlined dropdown-toggle-no-caret" id="exportButton" data-toggle="dropdown">
+                                        download
+                                    </button>
+                                    Export file (.txt or .csv)
+                                    <div class="dropdown-menu" aria-labelledby="exportButton">
+                                        <a class="dropdown-item" href="#" onclick="exportTxt()">.txt</a>
+                                        <a class="dropdown-item" href="#" onclick="exportCsv()">.csv</a>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
