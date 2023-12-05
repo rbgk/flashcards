@@ -16,6 +16,7 @@
     <script defer src="js/generateButton.js"></script>
     <script defer src="js/studyButton.js"></script>
     <script defer src="js/cardOverlay.js"></script>
+    <script defer src="js/importExport.js"></script>
 </head>
 <body>
     <main>
@@ -129,6 +130,19 @@
                                     delete_history
                                 </button>
                                 Clear data (theme override, text box, saved set)
+                            </li>
+                            <li>
+                                <input type="file" id="fileInput" accept=".csv, .txt" style="display: none" multiple="false" onchange="importFile()">
+                                <button type="button" class="btn btn-primary material-symbols-outlined" id="importButton" onclick="triggerImportPopup()">
+                                    upload
+                                </button>
+                                Import file (.txt or .csv)
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-primary material-symbols-outlined" id="exportButton" onclick="factoryReset()">
+                                    publish
+                                </button>
+                                Export file (.txt or .csv)
                             </li>
                         </ul>
                     </div>
