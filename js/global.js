@@ -84,3 +84,16 @@ function overlayAesthetics() {
     document.getElementById("game").style.height = webHeight;
 }
 
+
+/**
+ * Prevents the page from reloading/closing when inputBox is not empty 
+ * Gives extra grace period for user to save data
+ */
+function unloadPage() {
+    if (inputBox.value != "") {
+        return "You have unsaved changes.";
+    }
+}
+window.onbeforeunload = unloadPage;
+
+
