@@ -50,23 +50,53 @@ function populateBox(fileType, fileContent, resultTextBox) {
 }
 
 /**
- * Export a file of type .txt
- * Will check to make sure it is not empty 
+ * Export a file of type .txt or .csv 
+ * Will determine which method of export based on browser compatibility
  */
- function exportTxt() {
-    const fileInput = document.getElementById('fileInput')
-    const resultTextBox = document.getElementById('inputBox');
-    importFlow(fileInput, resultTextBox)
+ async function exportFile(fileExtension, mimeType) {
+    let textContent = document.getElementById('inputBox').value;
+    if (textContent.trim() != '') {
+        if (window.showSaveFilePicker) {
+            exportSupported(textContent, fileExtension, mimeType);
+          }
+        else {
+           exportUnsupported(textContent, fileExtension)
+        }
+    }
+    else {
+        alert('Input is empty. Please add text before exporting.')
+    }
+}
+ 
+/**
+ * Export a file for browsers that do support File System Access
+ * Will allow for selecting file location and name
+ */
+async function exportSupported(textContent, fileExtension, mimeType){
+    let handle = await window.showSaveFilePicker({
+        suggestedName: `flashcards${fileExtension}`,
+        types: [{
+            accept: {
+                [mimeType]: [fileExtension],
+            },
+        }],
+    });
+    let writable = await handle.createWritable();
+    await writable.write(textContent);
+    await writable.close();
 }
 
 /**
- * Export a file of type .csv
- * Will check to make sure it is not empty 
+ * Export a file for browsers that don't support File System Access
+ * Makes use of FileSaver to download file
  */
- function exportCsv() {
-    const fileInput = document.getElementById('fileInput')
-    const resultTextBox = document.getElementById('inputBox');
-    importFlow(fileInput, resultTextBox)
+function exportUnsupported(textContent, fileExtension) {
+    if (fileExtension == '.csv') {
+        saveAs(new Blob([textContent], { type: 'text/csv;charset=utf-8' }), 'flashcards.csv');
+    }
+    else {
+        saveAs(new Blob([textContent], { type: 'text/plain;charset=utf-8' }), 'flashcards.txt');
+    } 
 }
 
 
