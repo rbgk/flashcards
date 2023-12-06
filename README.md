@@ -21,13 +21,11 @@ Building an alternative to Quizlet
     - [ ] Spacebar flips card
     - [ ] Arrow keys progress through cards
 - [ ] Import file to generate cards
-    - [ ] Import as `.txt` file
-    - [ ] Import as `json` file
-    - [ ] Import as `csv` file
+    - [x] Import as `.txt` file
+    - [x] Import as `.csv` file
 - [ ] Export cards to file
-    - [ ] Export as `txt` file
-    - [ ] Export as `json` file
-    - [ ] Export as `csv` file
+    - [x] Export as `.txt` file
+    - [x] Export as `.csv` file
 
 ---
 ### Known Limitations of Project
