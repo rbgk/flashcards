@@ -2,6 +2,11 @@
  * Global Variables
  */
 
+/**
+ * Homepage URL
+ */
+const homeURL = "https://rbgk.github.io/flashcards";
+
 
 /**
  * gameStatusBar should be used to provide feedback to user
