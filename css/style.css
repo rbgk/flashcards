@@ -46,6 +46,14 @@
 .btn-close {
     filter: var(--exit-modal);
 }
+.dropdown-menu, .dropdown-item {
+    background-color: var(--background-clr);
+    color: var(--text-clr);
+}
+.dropdown-item:hover {
+    background-color: var(--modal-back);
+    color: var(--text-clr);
+}
 
 /* Top bar */
 nav {
