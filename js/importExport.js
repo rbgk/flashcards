@@ -32,9 +32,6 @@ function importFlow(fileInput, resultTextBox) {
         };
         reader.readAsText(selectedFile);
     }
-    else if (fileInput.files.length > 1) {
-        alert('Please select only one file.');
-    }
 }
     
 /**
