@@ -1,4 +1,4 @@
-//File reader for imports  
+// File reader for imports  
 const reader = new FileReader();
 
 /**
@@ -6,9 +6,9 @@ const reader = new FileReader();
  * Populates the input box if file is not empty and is of the correct type
  */
 function importFile() {
-    let fileInput = document.getElementById('fileInput')
-    let resultTextBox = document.getElementById('inputBox');
-    importFlow(fileInput, resultTextBox)
+    let fileInput = document.getElementById("fileInput");
+    let resultTextBox = document.getElementById("inputBox");
+    importFlow(fileInput, resultTextBox);
 }
 
 /**
@@ -16,8 +16,8 @@ function importFile() {
  * Triggers browser's import file selection
  */
 function triggerImportPopup() {
-    fileInput.value = '';
-    document.getElementById('fileInput').click()
+    fileInput.value = "";
+    document.getElementById("fileInput").click();
 }
 
 /**
@@ -26,9 +26,9 @@ function triggerImportPopup() {
  */
 function importFlow(fileInput, resultTextBox) {
     if (fileInput.files.length === 1) {
-        let selectedFile = fileInput.files[0]
+        let selectedFile = fileInput.files[0];
         reader.onload = function (e) {
-            populateBox(selectedFile.name.split('.').pop().toLowerCase(), e.target.result, resultTextBox)
+            populateBox(selectedFile.name.split(".").pop().toLowerCase(), e.target.result, resultTextBox);
         };
         reader.readAsText(selectedFile);
     }
@@ -39,10 +39,10 @@ function importFlow(fileInput, resultTextBox) {
  * Will also check for type again in case of manual override
  */
 function populateBox(fileType, fileContent, resultTextBox) { 
-    if (fileType === 'csv' || fileType === 'txt') {
+    if (fileType === "csv" || fileType === "txt") {
         resultTextBox.value = fileContent;
     } else {
-        alert('Invalid file type. Please select a .csv or .txt file.');
+        alert("Invalid file type. Please select a .csv or .txt file.");
     }
 }
 
@@ -50,18 +50,16 @@ function populateBox(fileType, fileContent, resultTextBox) {
  * Export a file of type .txt or .csv 
  * Will determine which method of export based on browser compatibility
  */
- async function exportFile(fileExtension, mimeType) {
-    let textContent = document.getElementById('inputBox').value;
-    if (textContent.trim() != '') {
+async function exportFile(fileExtension, mimeType) {
+    let textContent = document.getElementById("inputBox").value;
+    if (textContent.trim() != "") {
         if (window.showSaveFilePicker) {
             exportSupported(textContent, fileExtension, mimeType);
-          }
-        else {
-           exportUnsupported(textContent, fileExtension)
+        } else {
+            exportUnsupported(textContent, fileExtension);
         }
-    }
-    else {
-        alert('Input is empty. Please add text before exporting.')
+    } else {
+        alert("Input is empty. Please add text before exporting.");
     }
 }
  
@@ -69,7 +67,7 @@ function populateBox(fileType, fileContent, resultTextBox) {
  * Export a file for browsers that do support File System Access
  * Will allow for selecting file location and name
  */
-async function exportSupported(textContent, fileExtension, mimeType){
+async function exportSupported(textContent, fileExtension, mimeType) {
     let handle = await window.showSaveFilePicker({
         suggestedName: `flashcards${fileExtension}`,
         types: [{
@@ -88,11 +86,10 @@ async function exportSupported(textContent, fileExtension, mimeType){
  * Makes use of FileSaver to download file
  */
 function exportUnsupported(textContent, fileExtension) {
-    if (fileExtension == '.csv') {
-        saveAs(new Blob([textContent], { type: 'text/csv;charset=utf-8' }), 'flashcards.csv');
-    }
-    else {
-        saveAs(new Blob([textContent], { type: 'text/plain;charset=utf-8' }), 'flashcards.txt');
+    if (fileExtension == ".csv") {
+        saveAs(new Blob([textContent], { type: "text/csv;charset=utf-8" }), "flashcards.csv");
+    } else {
+        saveAs(new Blob([textContent], { type: "text/plain;charset=utf-8" }), "flashcards.txt");
     } 
 }
 
