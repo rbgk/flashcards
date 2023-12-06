@@ -16,8 +16,8 @@ function importFile() {
  * Triggers browser's import file selection
  */
 function triggerImportPopup() {
-        fileInput.value = '';
-        document.getElementById('fileInput').click()
+    fileInput.value = '';
+    document.getElementById('fileInput').click()
 }
 
 /**
