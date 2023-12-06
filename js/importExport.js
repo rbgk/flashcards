@@ -31,6 +31,7 @@ function importFlow(fileInput, resultTextBox) {
             populateBox(selectedFile.name.split(".").pop().toLowerCase(), e.target.result, resultTextBox);
         };
         reader.readAsText(selectedFile);
+        closeSettings();
     }
 }
     
@@ -59,7 +60,8 @@ async function exportFile(fileExtension, mimeType) {
             exportUnsupported(textContent, fileExtension);
         }
     } else {
-        alert("Input is empty. Please add text before exporting.");
+        closeSettings();
+        alert("Input is empty. Please add text before exporting.")
     }
 }
  
@@ -93,6 +95,14 @@ function exportUnsupported(textContent, fileExtension) {
     } 
 }
 
+/**
+ * Closes settings modal 
+ * Used for both import and export 
+ */
+function closeSettings() {
+    const escapeKeyPress = new KeyboardEvent('keydown', {key: 'Escape', code: 'Escape', keyCode: 27, which: 27});
+    document.getElementById('settingsModal').dispatchEvent(escapeKeyPress);
+}
 
 
 
