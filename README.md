@@ -20,10 +20,10 @@ Building an alternative to Quizlet
 - [ ] Support for keyboard input navigation
     - [ ] Spacebar flips card
     - [ ] Arrow keys progress through cards
-- [ ] Import file to generate cards
+- [ ] Import file to generate cards - [File Import/Export](https://github.com/rbgk/flashcards/#import-export)
     - [x] Import as `.txt` file
     - [x] Import as `.csv` file
-- [ ] Export cards to file
+- [ ] Export cards to file - [File Import/Export](https://github.com/rbgk/flashcards/#toolbar-buttons)
     - [x] Export as `.txt` file
     - [x] Export as `.csv` file
 
@@ -44,3 +44,8 @@ A section of buttons aiding the user.
   - HTML tags are NOT limited to bold, italic, underline. User can take advantage of `.innerHTML` and use supported HTML tags
 - Saving and loading a set
 - Clears the text box at one button click
+
+#### File Import and Export
+- Hidden within the settings panel, the user can choose to import and export files with the choice of `.csv` or `.txt`  
+  - Import a `.csv` or `.txt` file to upload their flashcards into the text box  
+  - Export the contents of the text box to a `.csv` or `.txt` file  
