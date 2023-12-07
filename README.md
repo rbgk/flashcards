@@ -6,12 +6,12 @@ Building an alternative to Quizlet
     - [x] Generate cards
     - [x] Start studying
     - [ ] Shuffle cards
-    - [x] Light/Dark [theme switch](https://github.com/rbgk/flashcards/#theme-switch)
-    - [x] HTML Text Formatting [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
-    - [x] Text wrapping toggle [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
-    - [x] Save a set [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
-    - [x] Load saved set [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
-    - [x] Clear textbox [toolbar buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
+    - [x] Light/Dark - [Theme Switch](https://github.com/rbgk/flashcards/#theme-switch)
+    - [x] HTML Text Formatting - [Toolbar Buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
+    - [x] Text wrapping toggle - [Toolbar Buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
+    - [x] Save a set - [Toolbar Buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
+    - [x] Load saved set - [Toolbar Buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
+    - [x] Clear the text box - [Toolbar Buttons](https://github.com/rbgk/flashcards/#toolbar-buttons)
 - [ ] Input parsing
     - [x] Raw user input using comma separation `word,definition`
 - [ ] Game
@@ -38,7 +38,7 @@ Building an alternative to Quizlet
 - Theme button functionality allows for manually override  
 - Manual override is stored in localStorage holding higher precedence than auto-detected preference  
 
-#### Toolbar buttons
+#### Toolbar Buttons
 A section of buttons aiding the user.  
 - Text formatting from bold, italic, underline
   - HTML tags are NOT limited to bold, italic, underline. User can take advantage of `.innerHTML` and use supported HTML tags
