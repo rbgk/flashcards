@@ -24,6 +24,22 @@
     --card-clr: var(--light-back);
 }
 
+/* noscript overlay - only used when a user has JavaScript disabled */
+#noscriptOverlay {
+    background-color: rgb(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+#noscriptOverlay > div {
+    color: white;
+    transform: translateY(30vh);
+}
+
 /* Used by JS output - see constants.js */
 .danger {
     color: red;
