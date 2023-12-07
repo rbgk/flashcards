@@ -117,3 +117,19 @@ function arrow_R_Disable() {
     arrow_L.classList.remove("btn-secondary");
     arrow_R.classList.add("btn-secondary");
 }
+
+/**
+     * Allows for keyboard input on buttons
+     * Requires that the study overlay to be active
+     */
+document.addEventListener('keyup', function(event) {
+    if (game.style.display == "flex") {
+        if (event.code === 'Space') {
+            flipCard();
+        } else if (event.code === 'ArrowLeft') {
+            decreaseCard()
+        } else if (event.code === 'ArrowRight') {
+            increaseCard()
+        }     
+    }
+});
