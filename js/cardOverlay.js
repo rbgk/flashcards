@@ -122,7 +122,15 @@ function arrow_R_Disable() {
  * Allows for keyboard input on buttons
  * Requires that the study overlay to be active
  */
-document.addEventListener('keyup', function(event) {
+document.addEventListener("keydown", function(event) {
+    // Prevent keyboard from scrolling the webpage
+    keypress = event.key;
+    window.addEventListener("keydown", function(e) {
+        if(["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.key) > -1) {
+            e.preventDefault();
+        }
+    }, false);
+    
     if (game.style.display == "flex") {
         if (event.code === 'Space' || event.code === 'ArrowUp' || event.code === 'ArrowDown') {
             flipCard();
