@@ -132,12 +132,15 @@ document.addEventListener("keydown", function(event) {
     }, false);
     
     if (game.style.display == "flex") {
-        if (event.code === 'Space' || event.code === 'ArrowUp' || event.code === 'ArrowDown') {
+        if (keypress === " " || keypress === "ArrowUp" || keypress === "ArrowDown") {
             flipCard();
-        } else if (event.code === 'ArrowLeft') {
+        } else if (keypress === "ArrowLeft") {
             decreaseCard();
-        } else if (event.code === 'ArrowRight') {
+        } else if (keypress === "ArrowRight") {
             increaseCard();
-        }     
+        } else if (keypress === "Escape") {
+            // closes the overlay
+            closeOverlay();
+        }
     }
 });
