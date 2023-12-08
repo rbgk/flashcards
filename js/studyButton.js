@@ -35,7 +35,7 @@ function launchOverlay() {
     cardIndexCheck();
 }
 
-function Close() {
+function closeOverlay() {
     /**
      * Closes the overlay
      */
