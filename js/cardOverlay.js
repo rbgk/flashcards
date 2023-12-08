@@ -119,17 +119,17 @@ function arrow_R_Disable() {
 }
 
 /**
-     * Allows for keyboard input on buttons
-     * Requires that the study overlay to be active
-     */
+ * Allows for keyboard input on buttons
+ * Requires that the study overlay to be active
+ */
 document.addEventListener('keyup', function(event) {
     if (game.style.display == "flex") {
-        if (event.code === 'Space') {
+        if (event.code === 'Space' || event.code === 'ArrowUp' || event.code === 'ArrowDown') {
             flipCard();
         } else if (event.code === 'ArrowLeft') {
-            decreaseCard()
+            decreaseCard();
         } else if (event.code === 'ArrowRight') {
-            increaseCard()
+            increaseCard();
         }     
     }
 });
