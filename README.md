@@ -17,9 +17,9 @@ Building an alternative to Quizlet
 - [ ] Game
     - [x] Play in order 
     - [ ] Play shuffled 
-- [ ] Support for keyboard input navigation
-    - [ ] Spacebar flips card
-    - [ ] Arrow keys progress through cards
+- [ ] Support for keyboard input navigation - [Keyboard Navigation](https://github.com/rbgk/flashcards/#keyboard-navigation)
+    - [x] Spacebar, Arrows Up/Down flips card
+    - [x] Arrow keys progress through cards
 - [ ] Import file to generate cards - [File Import/Export](https://github.com/rbgk/flashcards/#import-export)
     - [x] Import as `.txt` file
     - [x] Import as `.csv` file
@@ -49,3 +49,8 @@ A section of buttons aiding the user.
 - Hidden within the settings panel, the user can choose to import and export files with the choice of `.csv` or `.txt`  
   - Import a `.csv` or `.txt` file to upload their flashcards into the text box  
   - Export the contents of the text box to a `.csv` or `.txt` file  
+
+#### Keyboard Navigation
+When the user launches into the flashcards overlay, they can use the keyboard to navigate. 
+- To toggle from word to definition: Spacebar, Arrow Up, Arrow Down  
+- To progress up or down the list: Arrow Right, Arrow Left
