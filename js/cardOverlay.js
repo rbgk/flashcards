@@ -118,28 +118,29 @@ function arrow_R_Disable() {
     arrow_R.classList.add("btn-secondary");
 }
 
-/**
- * Allows for keyboard input on buttons
- * Requires that the study overlay to be active
- */
-document.addEventListener("keydown", function(event) {
-    // Prevent keyboard from scrolling the webpage
-    keypress = event.key;
-    window.addEventListener("keydown", function(e) {
-        if(["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.key) > -1) {
-            e.preventDefault();
-        }
-    }, false);
-    
+function keyboardNav(e) {
+    /**
+     * Create EventListener:
+     *  Allows for keyboard navigation input on overlay when active
+     *  Disables window scrolling when using arrow keys
+     */
+    keyPress = e.key;
+
+    // Prevent scrolling
+    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(keyPress) > -1) {
+        e.preventDefault();
+    }
+
+    // Define navigation keys
     if (game.style.display == "flex") {
-        if (keypress === " " || keypress === "ArrowUp" || keypress === "ArrowDown") {
+        if (keyPress === " " || keyPress === "ArrowUp" || keyPress === "ArrowDown") {
             flipCard();
-        } else if (keypress === "ArrowLeft") {
+        } else if (keyPress === "ArrowLeft") {
             decreaseCard();
-        } else if (keypress === "ArrowRight") {
+        } else if (keyPress === "ArrowRight") {
             increaseCard();
-        } else if (keypress === "Escape") {
+        } else if (keyPress === "Escape") {
             closeOverlay();
         }
     }
-});
+}
