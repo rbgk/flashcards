@@ -127,7 +127,7 @@ function keyboardNav(e) {
     keyPress = e.key;
 
     // Prevent scrolling
-    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(keyPress) > -1) {
+    if ([" ", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(keyPress) > -1) {
         e.preventDefault();
     }
 
