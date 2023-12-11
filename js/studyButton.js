@@ -11,7 +11,6 @@ function gameState(overlayAuth) {
     switch (overlayAuth) {
         case true:
             // enable
-            overlayAesthetics();
             launchOverlay();
             break;
         case false:
