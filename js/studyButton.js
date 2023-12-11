@@ -33,12 +33,14 @@ function launchOverlay() {
     defaultText("Navigate with arrows <br> Click card to flip");
     game.style.display = "flex";
     cardIndexCheck();
+    window.addEventListener("keydown", keyboardNav);
 }
 
-function Close() {
+function closeOverlay() {
     /**
      * Closes the overlay
      */
     game.style.display = "none";
     defaultText("Create another set or study again!");
+    window.removeEventListener("keydown", keyboardNav);
 }
