@@ -118,6 +118,7 @@ function arrow_R_Disable() {
     arrow_R.classList.add("btn-secondary");
 }
 
+
 function keyboardNav(e) {
     /**
      * Create EventListener:
