@@ -131,6 +131,28 @@ body {
     text-align: center;
 }
 
+/* Footer */
+footer {
+    background-color: var(--bars);
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+}
+footer ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer li {
+    margin: 20px;
+}
+footer a {
+    padding: 10px 0px;
+    margin: 0px 10px;
+    text-decoration: none;
+}
+
 /* Card Overlay */
 #game {
     display: none;
