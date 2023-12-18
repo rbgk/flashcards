@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
 .material-symbols-outlined {
-    vertical-align: text-top;
+    vertical-align: middle;
+}
+
+.btn:focus {
+    box-shadow: none;
 }
 
 :root {
