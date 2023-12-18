@@ -185,14 +185,14 @@ body {
 #cardFace {
     user-select: none;
     cursor: pointer;
-    border-radius: 25px;
-    border: 1px solid var(--card-clr);
+    border-radius: 5px;
     color: var(--text-clr);
     background-color: var(--background-clr);
     width: 400px;
     aspect-ratio: 2/1;
     position: absolute;
     overflow-wrap: break-word;
+    overflow-y: auto;
 }
 .arrows {
     margin: 0 20px;
