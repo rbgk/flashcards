@@ -127,6 +127,8 @@ body {
     color: var(--text-clr);
     background-color: var(--background-clr);
     white-space: nowrap;
+    line-height: 1.75;
+    cursor: auto;
 }
 #inputBox::placeholder {
     white-space: pre-wrap;
