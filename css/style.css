@@ -18,6 +18,11 @@
     --background-clr: var(--light-back);
     --modal-back: #fff;
     --card-clr: var(--dark-back);
+
+    --sb-size: 12px;
+    --sb-primary-color: #cecece;
+    --sb-secondary-color: #707b8c;
+    --sb-hover-color: #b3afab;
 }
 
 .darkTheme {
@@ -26,6 +31,23 @@
     --modal-back: #666;
     --exit-modal: invert(1) grayscale(100%) brightness(200%);
     --card-clr: var(--light-back);
+}
+
+::-webkit-scrollbar {
+    width: var(--sb-size);
+    height: var(--sb-size);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--sb-primary-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--sb-hover-color);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--sb-secondary-color);
+}
+::-webkit-scrollbar-corner {
+    background-color: var(--background-clr);
 }
 
 /* noscript overlay - only used when a user has JavaScript disabled */
