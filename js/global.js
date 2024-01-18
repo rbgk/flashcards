@@ -80,17 +80,6 @@ let overlayAuth = false;
 
 
 /**
- * When user zooms in or out after the overlay is launched,
- * the overlay does not correctly scale to block content
- */
-function overlayAesthetics() {
-    let webHeight = document.documentElement.scrollHeight;
-    webHeight = (webHeight-1)+"px";
-    document.getElementById("game").style.height = webHeight;
-}
-
-
-/**
  * Prevents the page from reloading/closing when inputBox is not empty 
  * Gives extra grace period for user to save data
  */
