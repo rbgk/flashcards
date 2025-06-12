@@ -1,5 +1,5 @@
 const CACHE_NAME = 'v1';
-const urlsToCache = ['index.html', 'css/style.css'];
+const urlsToCache = ['/index.html', '/css/style.css'];
 
 self.addEventListener('install', event => {
   event.waitUntil(
