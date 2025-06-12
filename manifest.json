@@ -1,0 +1,11 @@
+{
+    "name": "Flashcards App",
+    "icons": [
+        {
+            "src": "assets/images/logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "index.html"
+}
